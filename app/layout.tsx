@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { Sidebar } from './components/Sidebar'
+import { DoubleSidebar } from './components/DoubleSidebar'
 import { ThemeProvider } from './components/ThemeProvider'
 import { NavItems } from './components/NavItems'
 import { SidebarProvider } from './components/SidebarContext'
@@ -30,8 +30,8 @@ export default async function RootLayout({
         >
           <SidebarProvider>
             <div className="flex min-h-screen relative">
-              <Sidebar folders={folders} items={items} />
-              <main className="flex-1 w-full md:ml-64">
+              <DoubleSidebar folders={folders} items={items} />
+              <main className="flex-1 w-full md:ml-[28rem]">
                 <div className="max-w-4xl mx-auto p-4 md:p-8">
                   {children}
                 </div>

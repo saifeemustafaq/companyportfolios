@@ -59,7 +59,7 @@ export async function getFolderStructure(): Promise<FolderStructure[]> {
   
   // Add root folder with no items
   folders.push({
-    name: 'Select Company',
+    name: 'Select Category',
     path: '',
     items: [] // Empty array for root folder
   });

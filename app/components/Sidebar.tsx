@@ -91,7 +91,7 @@ export function Sidebar({ folders, items: defaultItems }: SidebarProps) {
                 }`}
               >
                 <span className="truncate">
-                  {folders.find(f => f.path === selectedFolder)?.name || 'Select Company'}
+                  {folders.find(f => f.path === selectedFolder)?.name || 'Select Category'}
                 </span>
                 <ChevronDown className={`h-4 w-4 transition-transform flex-shrink-0 ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
               </button>
