@@ -36,7 +36,7 @@ function getNavItemsForFolder(folderPath: string): NavItem[] {
   const items = files.map(file => {
     const filePath = path.join(folderPath, file);
     const fileName = file.replace('.md', '');
-    const relativePath = path.relative(path.join(process.cwd(), 'app/content'), folderPath);
+    const relativePath = path.relative(path.join(process.cwd(), 'content'), folderPath);
     const href = relativePath 
       ? `/content/${relativePath}/${encodeURIComponent(fileName)}`
       : `/content/${encodeURIComponent(fileName)}`;
@@ -52,7 +52,7 @@ function getNavItemsForFolder(folderPath: string): NavItem[] {
 }
 
 export async function getFolderStructure(): Promise<FolderStructure[]> {
-  const contentDir = path.join(process.cwd(), 'app/content');
+  const contentDir = path.join(process.cwd(), 'content');
   const entries = fs.readdirSync(contentDir, { withFileTypes: true });
   
   const folders: FolderStructure[] = [];
