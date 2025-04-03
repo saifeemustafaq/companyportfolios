@@ -22,14 +22,25 @@ export function Sidebar({ folders, items: defaultItems }: SidebarProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [isClient, setIsClient] = useState(false)
 
+  // Initialize based on current URL
   useEffect(() => {
     setIsClient(true)
     setItems(defaultItems)
-  }, [defaultItems])
 
+    // Extract folder from pathname
+    const pathParts = pathname.split('/')
+    if (pathParts.length >= 3 && pathParts[1] === 'content') {
+      const currentFolder = folders.find(f => f.path === pathParts[2])
+      if (currentFolder) {
+        setSelectedFolder(currentFolder.path)
+        setItems(currentFolder.items)
+      }
+    }
+  }, [pathname, folders, defaultItems])
+
+  // Handle folder selection
   useEffect(() => {
     if (!selectedFolder) {
-      router.push('/')
       setItems(defaultItems)
       return
     }
@@ -38,11 +49,11 @@ export function Sidebar({ folders, items: defaultItems }: SidebarProps) {
     const newItems = folder?.items || defaultItems
     setItems(newItems)
 
-    // Navigate to the first item if available
-    if (newItems.length > 0) {
+    // Only navigate to first item if we're not already on a valid path
+    if (newItems.length > 0 && !newItems.some(item => item.href === pathname)) {
       router.push(newItems[0].href)
     }
-  }, [selectedFolder, folders, defaultItems, router])
+  }, [selectedFolder, folders, defaultItems, router, pathname])
 
   if (!isClient) {
     return null
@@ -75,12 +86,14 @@ export function Sidebar({ folders, items: defaultItems }: SidebarProps) {
             <div className="relative w-full">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`w-full flex items-center justify-between font-semibold px-3 py-2 rounded-t transition-colors ${
+                className={`w-full flex items-center justify-between font-semibold px-3 py-2 rounded-t transition-colors whitespace-nowrap ${
                   isDropdownOpen ? 'bg-[var(--dropdown-bg)] border border-b-0 border-[var(--border-color)]' : 'hover:bg-[var(--sidebar-hover)]'
                 }`}
               >
-                {folders.find(f => f.path === selectedFolder)?.name || 'Select Company'}
-                <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
+                <span className="truncate">
+                  {folders.find(f => f.path === selectedFolder)?.name || 'Select Company'}
+                </span>
+                <ChevronDown className={`h-4 w-4 transition-transform flex-shrink-0 ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
               </button>
               {isDropdownOpen && (
                 <div className="absolute top-[calc(100%-1px)] left-0 w-full bg-[var(--dropdown-bg)] border border-[var(--border-color)] rounded-b shadow-lg z-10">
@@ -91,7 +104,7 @@ export function Sidebar({ folders, items: defaultItems }: SidebarProps) {
                         setSelectedFolder(folder.path)
                         setIsDropdownOpen(false)
                       }}
-                      className={`w-full text-left px-3 py-2 hover:bg-[var(--sidebar-hover)] transition-colors ${
+                      className={`w-full text-left px-3 py-2 hover:bg-[var(--sidebar-hover)] transition-colors whitespace-nowrap truncate ${
                         selectedFolder === folder.path ? 'bg-[var(--sidebar-hover)] font-medium' : ''
                       }`}
                     >

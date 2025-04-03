@@ -1,11 +1,11 @@
 seq:1
 
-## Overview of Workato
+# Overview of Workato
 
 Workato is a leading software company specializing in enterprise automation and integration. Founded in 2013, the company provides a cloud-based platform that enables businesses to connect applications, automate workflows, and streamline operations using low-code/no-code tools.
 
 ### Workato's Mission
-> to revolutionize the way organizations integrate and automate their workflows, creating a seamless and efficient workplace.
+> To revolutionize the way organizations integrate and automate their workflows, creating a seamless and efficient workplace.
 
 ### Founders and Establishment
 Workato was founded by **Vijay Tella**, **Gautham Viswanathan**, and **Harish Shetty**, with additional contributions from Dimitris Kogias and Alexey Timanovskiy. The company was officially established in **Cupertino, California**, with its headquarters now located in **Palo Alto, California**.
@@ -23,7 +23,7 @@ Workato has raised over **$420 million** across multiple funding rounds, achievi
 - Altimeter Capital
 - Tiger Global Management
 - Redpoint Ventures
-- Battery Ventures[6][7].
+- Battery Ventures.
 
 ### Locations and Offices
 Workato operates globally, with offices in key cities:
@@ -65,19 +65,19 @@ Workato serves a diverse range of customers across industries such as technology
 ### Prominent Customers
 
 1. **Global Enterprises**  
-   - **General Electric (GE)**: Uses Workato to streamline operations across various departments[3].  
-   - **Major League Baseball (MLB)**: Automates workflows for improved organizational efficiency[5].  
-   - **Broadcom**: Enhances business processes through intelligent automation[2].  
+   - **General Electric (GE)**: Uses Workato to streamline operations across various departments.  
+   - **Major League Baseball (MLB)**: Automates workflows for improved organizational efficiency.  
+   - **Broadcom**: Enhances business processes through intelligent automation.  
 
 2. **Technology Companies**  
-   - **Atlassian**: Employs Workato for software development integrations in Australia[8].  
-   - **HubSpot**: Utilizes the platform for cloud integrations in Massachusetts[5].  
+   - **Atlassian**: Employs Workato for software development integrations in Australia.  
+   - **HubSpot**: Utilizes the platform for cloud integrations in Massachusetts.  
 
 3. **Consulting Firms**  
-   - **Slalom**: Implements Workato for IT services and consulting projects in Seattle[3].  
+   - **Slalom**: Implements Workato for IT services and consulting projects in Seattle.  
 
 4. **Nonprofit Organizations**  
-   - **Embrace Grace**: A nonprofit that leverages Workato to integrate Salesforce, MailChimp, and QuickBooks for streamlined operations and focus on fundraising efforts[4].
+   - **Embrace Grace**: A nonprofit that leverages Workato to integrate Salesforce, MailChimp, and QuickBooks for streamlined operations and focus on fundraising efforts.
 
 5. **Other Notable Clients**  
    - Coca-Cola  
@@ -92,16 +92,10 @@ Workato serves a diverse range of customers across industries such as technology
    - Stitch Fix
 
 ### Customer Distribution
-- The majority of Workato's customers are based in the **United States**, followed by India and Australia[3][5].
-- Customers span various employee sizes:
-  - Large enterprises (10,000+ employees) such as Hitachi Vantara and Marel.
-  - Mid-sized companies (1,000–4,999 employees) dominate the customer base[3][5].
-
-### Customer Success Stories
-Workato’s platform has enabled organizations to save hundreds of hours by automating workflows across critical applications like Salesforce, QuickBooks, Slack, Google Workspace, and more. Customers report improved productivity, enhanced data security, and faster innovation cycles through seamless integration capabilities[9][12].
-
-These strategic partnerships and customer successes highlight Workato's role as a transformative leader in enterprise automation and integration solutions globally.
+- The majority of Workato's customers are based in the **United States**, followed by India and Australia.
+- Geographically, a substantial portion of Workato's customers are based in the United States. For instance, 6sense reports that 74.79% of Workato's customers are from the U.S. Similarly, Enlyft indicates that 70% of Workato's customers are in the United States. These figures highlight Workato's strong presence in the U.S. market.
+- In terms of customer demographics, Workato's platform is utilized by companies of varying sizes. According to Enlyft, 50% of Workato's customers are medium-sized businesses, 30% are large enterprises (with over 1,000 employees), and 19% are small businesses (with fewer than 50 employees). This diverse customer base underscores the platform's versatility in catering to organizations of different scales.
 
 ### Challenges and Future Outlook
-While Workato faces competition from platforms like MuleSoft and Zapier, its focus on innovation positions it as a leader in the integration Platform-as-a-Service (iPaaS) market. The company plans to expand its market presence further and potentially pursue an IPO in the future[6][8].
+While Workato faces competition from platforms like MuleSoft and Zapier, its focus on innovation positions it as a leader in the integration Platform-as-a-Service (iPaaS) market. The company plans to expand its market presence further and potentially pursue an IPO in the future.
 

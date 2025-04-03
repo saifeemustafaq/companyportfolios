@@ -12,25 +12,23 @@
   --blockquote-bg: #f8fafc;
 }
 
+.dark {
+  --background: #121212;
+  --foreground: #f8f9fa;
+  --sidebar-bg: #1e1e1e;
+  --sidebar-hover: #2d2d2d;
+  --border-color: #2f2f2f;
+  --dropdown-bg: #242424;
+  --link-color: #60a5fa;
+  --code-bg: #282828;
+  --blockquote-bg: #1e1e1e;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --sidebar-bg: #111111;
-    --sidebar-hover: #1a1a1a;
-    --border-color: #222222;
-    --dropdown-bg: #111111;
-    --link-color: #60a5fa;
-    --code-bg: #1e1e1e;
-    --blockquote-bg: #1a1a1a;
-  }
 }
 
 body {
@@ -249,6 +247,7 @@ body {
   vertical-align: bottom;
   padding: 0.75em 1em;
   border-bottom: 1px solid var(--border-color);
+  text-align: left;
 }
 
 .prose tbody tr {
@@ -262,6 +261,11 @@ body {
 .prose tbody td {
   vertical-align: top;
   padding: 0.75em 1em;
+  border-right: 1px solid var(--border-color);
+}
+
+.prose tbody td:last-child {
+  border-right: none;
 }
 
 .prose :is(h1, h2, h3, h4) {

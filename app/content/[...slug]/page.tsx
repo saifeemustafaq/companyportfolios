@@ -3,6 +3,7 @@ import path from 'path';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import Image, { ImageProps as NextImageProps } from 'next/image';
+import remarkGfm from 'remark-gfm';
 
 type CustomImageProps = Omit<NextImageProps, 'alt'> & {
   alt?: string;
@@ -32,8 +33,17 @@ const components = {
   ),
   table: (props: ComponentProps) => (
     <div className="overflow-x-auto">
-      <table {...props} />
+      <table {...props} className="min-w-full divide-y divide-[var(--border-color)]" />
     </div>
+  ),
+  thead: (props: ComponentProps) => (
+    <thead {...props} className="bg-[var(--code-bg)]" />
+  ),
+  th: (props: ComponentProps) => (
+    <th {...props} className="px-4 py-3 text-left text-sm font-semibold" />
+  ),
+  td: (props: ComponentProps) => (
+    <td {...props} className="px-4 py-3 text-sm whitespace-normal" />
   ),
   blockquote: (props: ComponentProps) => (
     <blockquote {...props} className="border-l-4 border-[var(--border-color)] pl-4 italic" />
@@ -72,7 +82,11 @@ export default async function ContentPage({
           source={contentWithoutSeq} 
           components={components}
           options={{
-            parseFrontmatter: true
+            parseFrontmatter: true,
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+              format: 'mdx'
+            }
           }}
         />
       </article>

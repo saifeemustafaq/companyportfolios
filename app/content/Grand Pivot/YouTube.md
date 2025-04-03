@@ -1,6 +1,6 @@
 seq:3
 
-# The Grand Pivot - YouTube: From Dating Platform to Video Empire
+# YouTube: From Dating Platform to Video Empire
 
 In 2005, three former PayPal employees registered the domain YouTube.com on Valentine's Day, envisioning a video dating service where singles could upload introductions of themselves. Less than two years later, Google acquired this same company for $1.65 billion. This remarkable transformation from a failed dating concept to the world's largest video platform represents one of Silicon Valley's most dramatic business pivots, demonstrating how quickly a company can reinvent itself when faced with market realities. YouTube's journey offers critical insights into the entrepreneurial process, particularly the delicate balance between persistence and flexibility.
 
