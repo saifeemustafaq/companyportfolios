@@ -21,8 +21,9 @@ function getFileSequence(filePath: string): number {
       const seq = parseInt(firstLine.replace('seq:', ''), 10);
       return isNaN(seq) ? Infinity : seq;
     }
-  } catch (error) {
-    // If there's any error reading the file or parsing the sequence
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (_error) {
+    // If there's any error reading the file or parsing the sequence, return Infinity
     return Infinity;
   }
   return Infinity; // Files without sequence will be placed at the end

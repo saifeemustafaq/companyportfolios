@@ -1,8 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { notFound } from 'next/navigation';
-
 export default function Home() {
   return (
     <div className="max-w-2xl mx-auto">
